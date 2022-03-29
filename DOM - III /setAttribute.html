@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Create Element</title>
+        <style>
+            .s-image {
+                height: 500px;
+            }
+        </style>
+	</head>
+	<body>
+		
+        
+    </body>
+    
+    <script type="text/javascript">
+
+    // setAttributes 
+    //  Syntax - setAttribute("attributeName", "value")
+    
+    
+    var image= document.createElement("img");
+    
+    // ONE WAY: 
+    // image.src = "https://media-exp1.licdn.com/dms/image/C4E03AQG2neHYDnNcOw/profile-displayphoto-shrink_800_800/0/1646155061683?e=2147483647&v=beta&t=_G8bberZ6y-UbXfrxutuDjaZtIO0CXN1NPT4hHmx7T8";
+    // document.querySelector("body").append(image);
+    
+    //ANOTHER WAY: 
+    image.setAttribute(
+    "src", 
+    "https://media-exp1.licdn.com/dms/image/C4E03AQG2neHYDnNcOw/profile-displayphoto-shrink_800_800/0/1646155061683?e=2147483647&v=beta&t=_G8bberZ6y-UbXfrxutuDjaZtIO0CXN1NPT4hHmx7T8");
+    
+    image.setAttribute("alt", "Shaswati image");
+
+    // class, id -> attributes that are available for every HTML tag
+
+    image.setAttribute("id", "s-image");
+
+    document.querySelector("body").append(image);
+
+    </script>
+</html>

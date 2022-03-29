@@ -1,0 +1,89 @@
+<!-- FORM SUBMIT BASIC
+Create a form with 5 input boxes having following fields
+
+Name
+
+Age
+
+Gender (select tag)
+
+Email
+
+Mobile Number
+
+On form submit display all data in form of array of objects in browser console -->
+
+<!-- POINTS FOR USING FORMS:
+
+1) WRAP ALL INPUTS INSIDE A FORM TAG
+
+2) INSTEAD OF USING BUTTON, USE input type="submit" 
+
+3) Add eventListener to form tag
+
+4) event name should be "submit"
+
+5) Whenever you use forms, it will try to send data to server, 
+in this process, the page is getting refreshed - it is the default behaviour;
+
+6) We need to prevent this default behaviour -> We do this 
+by using event.preventDefault() - needs to be the first line in the function called
+
+
+-->
+
+
+<html>
+    <head>
+        <title>Form Submit Basic</title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <form id="formTag">
+                <input type="text" id="name" placeholder="Name" />
+                <input id="age" name="Age" placeholder="Age">
+                <select id="gender" aria-placeholder="Gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <input id="email" name="Email" placeholder="Email ID">
+                <input id="mobile" name="mobile" placeholder="Mobile Number">
+                
+                <!-- //SUBMIT -->
+                <input type="submit" value="Login"/> 
+                <!-- in Inputs of type="submit", instead of name, set a value -->
+        </form>
+            
+    </body>
+        
+        <script>
+
+            //Create the Event Listener for Form Tag:
+            document.querySelector("#formTag").addEventListener("submit", displayObjects)
+                // Note: we can also select the <FORM> by just using the form tag itself, 
+                // not necessary to use id for form tag
+            
+            //Create the Callback Function on the event:
+            function displayObjects() {                
+                
+                //Crucial to add event.preventDefault() otherwise it would refresh, it's default behaviour
+                event.preventDefault(); 
+                
+               console.log("inside my function");
+               var name=document.querySelector("#name").value;
+               var age=document.querySelector("#age").value;
+               var email=document.querySelector("#email").value;
+               var mobile=document.querySelector("#mobile").value;
+
+               console.log(name, age, email, mobile);
+            }
+
+        
+
+            
+
+        </script>
+    
+</html>

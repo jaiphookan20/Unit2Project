@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Coffee - Flex</title>
+    <style>
+
+        /* USING FLEX */
+        
+        #container {
+          width: 80%;
+          /* height: 600px; */
+          /* border: 1px solid red;  */
+          /* if we don't use flex, all the divs will line up in one column */
+          display: flex;  
+          flex-wrap: wrap;
+          /* Use flex-wrap for the divs to wrap around the main container ie  
+          if the parent container has a width of 100%, & 9 child divs have a width of 
+          25% each, then only 4 divs can fit in that row/block, so next 4 divs are placed 
+          in the next row/block, and remaining 1 div will be in final block/row
+          */
+          justify-content: space-around;
+          margin: auto;
+          margin-top: 50px;
+
+        }
+
+        /* For each individual child div of the id=container */
+        #container > div {
+          width: 32%;
+          /* border: 1px solid blue;         */
+          height: auto;
+          /* NOTE: If we use display-flex in main container - irregardless of width chosen for each individual child div,
+          the divs will all line up in the same block/row and each child divs width will be adjusted automatically to fit into the width of the parent container */
+          margin-bottom: 20px;
+          box-sizing: border-box;  
+          /* Note: Box-Sizing: border-box -> Still need to understand this */
+          padding: 0px 10px 0px 10px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          border-radius: 15px;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+          
+        }
+
+        .innerbox {
+         display: flex; 
+         justify-content: space-between;
+        }
+
+        p {
+          font-size: 20px;
+          color: grey;
+        }
+
+        .innerbox > h3 + h3 {
+          color:goldenrod;       
+        } 
+
+    </style>
+  </head>
+    
+  <body>
+ <!-- dont change any tags and id name -->
+ <!-- use borders to check for boxes -->
+
+ <!-- main container -->
+    <div id="container">
+      
+      <!-- Main container contains 9 boxes/divs inside -->
+      <div>
+        <!--class="innerbox" is the box where we have coffee name and price -->
+        <div class="innerbox">
+          <h3>Cappuccino </h3>
+          <h3>$40</h3>
+        </div> 
+        <!--para with text - usage of internet  -->
+        <p>Shaswati has a pair of big tits that I really want to suck on bigtime</p>
+      </div>
+        
+      <div>
+          <div class="innerbox">
+              <h3>Cappuccino </h3>
+              <h3>$40</h3>
+            </div> 
+            <!--para with text - usage of internet  -->
+            <p>Shaswati has a pair of big tits that I really want to suck on bigtime</p>
+      </div>
+
+      <div>
+          <div class="innerbox">
+              <h3>Cappuccino </h3>
+              <h3>$40</h3>
+            </div> 
+            <!--para with text - usage of internet  -->
+            <p>Shaswati has a pair of big tits that I really want to suck on bigtime</p>
+      </div>
+      
+      <div>
+          <div class="innerbox">
+              <h3>Cappuccino </h3>
+              <h3>$40</h3>
+            </div> 
+            <!--para with text - usage of internet  -->
+            <p>Shaswati has a pair of big tits that I really want to suck on bigtime</p>
+      </div>
+      
+      <div>
+          <div class="innerbox">
+              <h3>Cappuccino </h3>
+              <h3>$40</h3>
+            </div> 
+            <!--para with text - usage of internet  -->
+            <p>Shaswati has a pair of big tits that I really want to suck on bigtime</p>
+      </div>
+      
+      <div>
+          <div class="innerbox">
+              <h3>Cappuccuno</h3>
+              <h3>$40</h3>
+            </div> 
+            <!--para with text - usage of internet  -->
+            <p>Shaswati has a pair of big tits that I really want to suck on bigtime</p>
+      </div>
+      
+      <div>
+          <div class="innerbox">
+              <h3>Cappuccuno</h3>
+              <h3>$40</h3>
+            </div> 
+            <!--para with text - usage of internet  -->
+            <p>Shaswati has a pair of big tits that I really want to suck on bigtime</p>
+      </div>
+      
+      <div>
+          <div class="innerbox">
+              <h3>Cappuccuno</h3>
+              <h3>$40</h3>
+            </div> 
+            <!--para with text - usage of internet  -->
+            <p>Shaswati has a pair of big tits that I really want to suck on bigtime</p>
+      </div>
+      
+      <div>
+          <div class="innerbox">
+              <h3>Cappuccuno</h3>
+              <h3>$40</h3>
+            </div> 
+            <!--para with text - usage of internet  -->
+            <p>Shaswati has a pair of big tits that I really want to suck on bigtime</p>
+      </div>
+    
+    </div>  <!-- //Main container closing tag -->
+  
+  </body>
+</html>

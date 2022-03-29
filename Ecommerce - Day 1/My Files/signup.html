@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup Page</title>
+    <style>
+         a {
+            text-decoration: none;
+        }
+
+        #navbar {
+          display: flex;
+          justify-content: space-around;
+          background-color: teal;
+          padding: 10px;
+        }
+
+        #navbar a:hover {
+          color: white; 
+        }
+
+        #navbar a {
+          cursor: pointer;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+            <div><a href="mens.html">Men</a> </div>
+            <div><a href="womens.html">Women</a> </div>
+            <div><a href="signup.html">Signup</a> </div>
+            <div><a href="login.html">Login</a> </div>
+    </div>
+    <h1>Signup Page</h1>
+
+    <form id="form">
+      <input id="email" type="email" placeholder="Enter email " />
+      <input id="pass" type="password" placeholder="Enter password " />
+      <input id="user" type="text" placeholder="Enter username " />
+      <input type="submit" />
+    </form>
+  
+  </body>
+</html>
+
+<script>
+        document.querySelector("form").addEventListener("submit", signUpFunc)
+        
+        var userData=JSON.parse(localStorage.getItem("userCreds")) || [];
+        
+        function signUpFunc() {
+            event.preventDefault();
+      
+            var userObj = {
+                email: document.querySelector("#email").value,
+                password: document.querySelector("#pass").value,
+                userName: document.querySelector("#user").value
+              };
+
+          //Checking to see if once values are submitted to the form and submit 
+          // button is clicked, does it log the data to the console?
+          console.log(userObj);
+          
+          //Once we see that data is being logged, we push each data object into an array, so that 
+          // it gets stored in localstorage as an array of objects ie we want all data objects to be sent to localStorage (which is possible only by placing the data objects in an array whereas without the array, we would only be pushing the latest data object and not all)
+          userData.push(userObj);
+          
+          //NOTE: PUSHING THE ARRAY OF OBJECTS INTO LOCAL STORAGE:
+          localStorage.setItem("userCreds", JSON.stringify(userData));
+          // note: userCreds is the key of the object that we would be storing the 'userData' data in
+          // We use stringify in order to store the data as an array of objects in LS
+        }
+
+        //NOTE: Once the array of objects has been stored/set in localStorage, there are 2 bugs to be taken care of: 
+        // 1) If we refresh and add another entry, it overwrites the earlier stored entry
+                // We take care of this by -> instead of using an empty array, at first, we use 
+                // extract/get the data stored in localStorage (in line 51)
+        // 2) The 2nd bug -> if the key we are looking for ie in this case userCreds 
+                // is not present in localStorage, we instead then want an empty array, hence || []
+                // which means to say if it the object key sought is present, return that value otherwise provide an empty array
+      </script>

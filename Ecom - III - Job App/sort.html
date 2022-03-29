@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  let employees = [
+    { name: "john", salary: 90000, hireDate: "July 1, 2010" },
+    { name: "david", salary: 75000, hireDate: "August 15, 2009" },
+    { name: "ana", salary: 80000, hireDate: "December 12, 2011" },
+  ];
+
+  //Note: Sorting by Names
+  var sortedNames = employees.sort(function (a, b) {
+    // Inside the sort function is a compare function which takes 
+    
+    //Ascending Order:
+    // If you want ascending order put if (a.name > b.name) return 1 & bottom put
+    // & if (a.name < b.name) return -1;
+    
+    //Descending Order:
+    // if (a.name > b.name) return -1;
+    //  if (a.name < b.name) return 1;
+    if (a.name > b.name) return -1;
+    if (a.name < b.name) return 1;
+    return 0;
+    //Returns 0 if both keys are equal
+  });
+
+  console.log(sortedNames);
+
+
+//Note: Sort by Numbers:
+// For Ascending Order: 
+// var sortByNumbers = employees.sort(function(a,b){
+//   return (a.salary)- (b.salary)  })
+// For Descending Order:
+// var sortByNumbers = employees.sort(function(a,b){
+//       return (b.salary)- (a.salary)  })
+
+var sortByNumbers = employees.sort(function(a,b){
+      return Number(b.salary)- Number(a.salary)
+})
+
+console.log(sortByNumbers)
+
+var arr =[1,5,6,90,10]
+
+console.log(arr.sort(function(a,b){
+      return b-a
+}))
+
+
+
+
+</script>

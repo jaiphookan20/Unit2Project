@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Create Element</title>
+	</head>
+	<body>
+		
+        
+    </body>
+    
+    <script type="text/javascript">
+
+    // createElement -> creating a tag
+    //  1. creating a tag - h1, h2, div, img
+    //  2. then write innerText
+    //  3. we need to then append it to the body
+
+    var heading=document.createElement("h1");
+    heading.innerText="Heading 1";
+    
+    var box= document.createElement("div");
+    box.innerText="I am div";
+
+    var para=document.createElement("p");
+    para.innerText = "I am paragraph";
+    
+    document.querySelector("body").append(heading, box, para);
+
+
+         
+    </script>
+</html>

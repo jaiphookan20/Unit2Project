@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Investors</title>
+        <style>
+            #container {
+
+            }
+        </style>
+	</head>
+	<body>
+		<div id="container">
+
+        </div>
+        
+    </body>
+    
+    <script type="text/javascript">
+
+        var investors= []
+
+        investors.map(function (elem) {
+          var box = document.createElement("div");
+          
+          var img = document.createElement("img");
+          img.src=elem.image;
+
+          box.append(img);
+        
+          var companyRoll=document.createElement("h4");
+          companyRoll.innerText=elem.name;
+
+          document.querySelector("body").append(box);
+
+        })
+        
+
+         
+    </script>
+</html>

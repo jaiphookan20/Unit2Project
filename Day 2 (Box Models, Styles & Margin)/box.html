@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Box Model
+        </title>
+    </head>
+    
+    <!-- To build a box, all you need is height; width and a border -->
+    <!-- INLINE BLOCK: add display: inline-block -> to allow a block level element to be side-by-side -->
+
+    <body>
+        <div style="height: 300px; width: 100%; border: 1px solid red">
+            <div style="height: 95%; width:24%; border: 1px solid teal; display: inline-block"></div>
+            <div style="height: 95%; width:24%; border: 1px solid teal; display: inline-block"></div>
+            <div style="height: 95%; width:24%; border: 1px solid teal; display: inline-block"></div>
+            <div style="height: 95%; width:24%; border: 1px solid teal; display: inline-block"></div>
+        </div>
+        
+        <!-- Display: flex -> To avoid writing display:inline block over each div -> instead write display:flex on the parent div -->
+        
+        <div style="height: 300px; width: 100%; border: 1px solid red; display: flex">
+            <div style="height: 95%; width:25%; border: 1px solid teal; "></div>
+            <div style="height: 95%; width:25%; border: 1px solid teal; "></div>
+            <div style="height: 95%; width:25%; border: 1px solid teal; "></div>
+            <div style="height: 95%; width:25%; border: 1px solid teal; "></div>
+        </div>
+    </body>
+
+
+
+</html>

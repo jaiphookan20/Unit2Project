@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Buttons</title>
+        <style>
+           
+        </style>
+	</head>
+	<body>
+		
+        
+    </body>
+    
+    <script type="text/javascript">
+
+//   //button 1
+//    var btn1=document.createElement("button");
+//    btn1.textContent="Primary";
+//    btn1.style.backgroundColor="blue";
+//    btn1.style.color="white";
+
+//    //button 2
+//    var btn2=document.createElement("button");
+//    btn2.textContent="Secondary";
+//    btn2.style.backgroundColor="orange";
+//    btn2.style.color="white";
+
+//    //button 3
+//    var btn3=document.createElement("button");
+//    btn3.textContent="Tertiary";
+//    btn3.style.backgroundColor="green";
+//    btn3.style.color="white";
+
+//     document.querySelector("body").append(btn1, btn2, btn3);
+
+
+//ANOTHER WAY: 
+var textContent= [
+    "Primary",
+    "Secondary",
+    "Success",
+    "Danger",
+    "Warning",
+    "info",
+    "light",
+    "Dark",
+    "link"
+];
+
+var color = [
+    "blue",
+    "grey",
+    "green",
+    "yellow",
+    "cyan",
+    "white",
+    "black",
+    "white",
+    "purple"
+];
+
+
+for (var i=0; i< 9; i++) {
+    var btn = document.createElement("button");
+    btn.textContent=textContent[i];
+    btn.style.backgroundColor=color[i];
+    document.querySelector("body").append(btn);
+}
+
+//ANOTHER WAY - USING OBJECTS & MAP: 
+
+var buttonObj = [
+    { textContent: "Primary", color: "white", bgColor: "blue" },
+    { textContent: "Secondary", color: "white", bgColor: "grey" },
+    { textContent: "Danger", color: "white", bgColor: "red" },
+    { textContent: "Warning", color: "black", bgColor: "yellow" },
+    { textContent: "Info", color: "white", bgColor: "cyan" },
+    { textContent: "Light", color: "black", bgColor: "white" },
+    { textContent: "Success", color: "white", bgColor: "green" },
+    { textContent: "Dark", color: "white", bgColor: "black" },
+    { textContent: "Link", color: "blue", bgColor: "white" },
+  ];
+
+
+
+  //   for (var i = 0; i < 9; i++) {
+  //     var btn1 = document.createElement("button");
+  //     btn1.textContent = textContent[i];
+  //     btn1.style.backgroundColor = "blue";
+  //     btn1.style.color = "white";
+  //     document.querySelector("body").append(btn1);
+  //   }
+
+  buttonObj.map(function (ele) {
+    var btn1 = document.createElement("button");
+    btn1.textContent = ele.textContent;
+    btn1.style.backgroundColor = ele.bgColor;
+    btn1.style.color = ele.color;
+    document.querySelector("body").append(btn1);
+  });
+
+
+
+
+    </script>
+</html>

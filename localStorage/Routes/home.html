@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Routing</title>
+    <style>
+        #navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: teal;
+            padding: 20px;
+        }
+
+        #navbar > div {
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+  </head>
+  <body>
+        <div id="navbar">
+          <!-- By using anchor tag   -->
+          <div><a href="mens.html">Mens</a></div>
+          <!-- By using onClick: Ideally don't use onClick, use anchor or eventListener instead --> 
+          <div onclick="window.location.href='womens.html'">Womens</div>
+          
+          <div id="kids">Kids</div>
+          
+          <div>Shoes</div>
+        </div>
+  </body>
+</html>
+
+<script>
+
+  // 3 ways:
+  //  1. anchor tag <a>
+  //  2. onClick
+  //  3. eventListener("click", function)
+</script>

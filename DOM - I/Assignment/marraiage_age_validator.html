@@ -1,0 +1,37 @@
+<!-- t should take the gender (dropdown) and year of birth as input 
+    and show an alert if the user is of the valid legal age to get married or not -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Values</title>
+</head>
+<body>
+    
+    <!-- It should take the gender (dropdown)  -->
+	<select aria-placeholder="Gender" id="gender">
+		<option value="" >--</option>
+		<option value="male">Male</option>
+		<option value="female">Freedom</option>
+    </select>
+    <!-- & year of birth as input -->
+	<input type="number" name="Year of birth" id="yob" placeholder="Year of Birth">
+    <hr>
+    <!-- BUTTONS: -->
+    <button onclick="showGender()">GENDER</button>
+    <button onclick="showYOB()">Year of Birth</button>
+	
+    
+    <script type="text/javascript">
+		function showYOB() {
+			// Show the alert of the filled name
+            alert(document.getElementById("yob").value)
+		}
+
+		function showGender() {
+			// Show the alert of the selected Gender
+            alert(document.getElementById("gender").value)   
+		}
+	</script>
+</body>
+</html>

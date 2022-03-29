@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectors</title>
+    <style>
+      h1 {
+        background-color: yellow;
+      }
+
+      div {
+        background-color: teal;
+      }
+      img {
+        height: 100px;
+        width: 100px;
+      }
+
+      #red {
+        background-color: red;
+      }
+
+      #pink {
+        background-color: pink;
+      }
+      #yellow-color {
+        background-color: yellow;
+      }
+      .teal {
+        background-color: teal;
+      }
+
+      /* universal selector */
+      * {
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="red">I am akshay, my fav color is red</p>
+    <h1>I am heading 1</h1>
+    <div>I am a box</div>
+    <img
+      src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg"
+    />
+    <p id="pink">I am shameem , my fav color is pink</p>
+    <p id="yellow-color">I am shailesh, my fav color is yellow</p>
+    <p class="teal">I am sukhdev, my fav color is teal</p>
+
+    <!-- id's should be unique -->
+    <p class="teal">I am laksmi, my fav color is also teal</p>
+  </body>
+</html>
+
+<!-- Selectors - >element/tag ,  id, type, class, universal, inline-style -->
+
+Priority -> SICTU
+S - style/ inline style - 1000
+I - id - 100
+C - class - 10
+T - type - 1
+U - universal - 0
